@@ -1,5 +1,5 @@
 """
-WSGI config for modelformstest project.
+WSGI config for tutorial-django-database project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

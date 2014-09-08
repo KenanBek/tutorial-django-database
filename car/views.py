@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 
 from models import Car
 from forms import CarForm
@@ -21,6 +21,7 @@ def car(request, car_id=None, template="car/car.html", context={}):
 
     if request.method == 'POST':
         car_object = car_form.save()
+        return redirect('/car')
 
     context['car_id'] = car_id
     context['car_object'] = car_object
