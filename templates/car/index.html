@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+List of cars.
+<a href="{% url 'car:new' %}">New car</a>
+<ul>
+    {% for car in car_list %}
+        <li>
+            <a href="{% url 'car:modify' car.id %}">{{ car.manufacturer }} {{ car.model }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Car. {{ car_id }}
+<a href="{% url 'car:index' %}">All cars</a>
+<form method="post">
+    {% csrf_token %}
+    {{ car_form.as_p }}
+    <button type="submit">Submit changes</button>
+</form>
+
+</body>
+</html>
